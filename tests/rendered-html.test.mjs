@@ -18,7 +18,7 @@ test("shows the saved deprecated model and fallback notice when backend reports 
   const html = (await response.text()).replaceAll("<!-- -->", "");
 
   assert.equal(response.status, 200);
-  assert.match(html, /<title>Model settings · Northstar AI<\/title>/i);
+  assert.match(html, /<title>Model settings · ASU AI<\/title>/i);
   assert.match(html, /Atlas 2 — Deprecated/);
   assert.match(html, /Your project is using a fallback model/);
   assert.match(html, /Atlas 2 has been deprecated/);

@@ -47,7 +47,7 @@ export function isDeprecatedModelFallback(model: ProjectModelState) {
 export function getProjectModelState(state: "fallback" | "active"): Project {
   return {
     id: "prj_8KL42P",
-    name: "Support copilot",
+    name: "FAQ Assistant",
     model:
       state === "fallback"
         ? {

@@ -6,7 +6,7 @@ import {
 } from "./model-state";
 
 export const metadata: Metadata = {
-  title: "Model settings · Northstar AI",
+  title: "Model settings · ASU AI",
   description: "Configure the model used by your AI project.",
 };
 
@@ -22,9 +22,9 @@ export default async function Home({ searchParams }: HomeProps) {
   return (
     <div className="app-shell">
       <aside className="sidebar" aria-label="Main navigation">
-        <div className="brand" aria-label="Northstar home">
-          <span className="brand-mark">N</span>
-          <span>Northstar</span>
+        <div className="brand" aria-label="ASU AI home">
+          <span className="brand-mark">ASU</span>
+          <span>ASU AI</span>
         </div>
 
         <nav className="nav-list">
@@ -35,8 +35,8 @@ export default async function Home({ searchParams }: HomeProps) {
         </nav>
 
         <div className="workspace-card">
-          <span className="avatar">FT</span>
-          <span><strong>Faith&apos;s workspace</strong><small>Free plan</small></span>
+          <span className="avatar">ASU</span>
+          <span><strong>ASU workspace</strong><small>AI Builder</small></span>
           <span aria-hidden="true">•••</span>
         </div>
       </aside>
@@ -47,7 +47,7 @@ export default async function Home({ searchParams }: HomeProps) {
           <div className="top-actions">
             <span className="status-dot"><i /> All systems operational</span>
             <button className="icon-button" aria-label="Notifications">♢</button>
-            <span className="header-avatar">FT</span>
+            <span className="header-avatar">ASU</span>
           </div>
         </header>
 
