@@ -2,6 +2,12 @@
 
 A focused front-end implementation for AI projects whose saved model has been deprecated and replaced at runtime by an active fallback.
 
+## Live prototype
+
+### [Open the ASU AI Builder prototype →](https://atimoh-boop.github.io/model_deprecations/)
+
+The live prototype shows the deprecated-model fallback experience inside an ASU AI Builder-style interface.
+
 ## Behavior
 
 - The selector keeps showing the project's saved (deprecated) model.
