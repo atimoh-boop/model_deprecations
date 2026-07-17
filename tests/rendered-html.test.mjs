@@ -18,11 +18,14 @@ test("shows the saved deprecated model and fallback notice when backend reports 
   const html = (await response.text()).replaceAll("<!-- -->", "");
 
   assert.equal(response.status, 200);
-  assert.match(html, /<title>Model settings · ASU AI<\/title>/i);
-  assert.match(html, /Atlas 2 — Deprecated/);
-  assert.match(html, /Your project is using a fallback model/);
-  assert.match(html, /Atlas 2 has been deprecated/);
-  assert.match(html, /continuing on[\s\S]*Nimbus 4\.1/);
+  assert.match(html, /<title>Basic settings · ASU AI<\/title>/i);
+  assert.match(html, /GPT-4\.1 Mini — Deprecated/);
+  assert.match(html, /Your selected model has been deprecated/);
+  assert.match(html, /still shows[\s\S]*GPT-4\.1 Mini/);
+  assert.match(html, /running on[\s\S]*GPT-5\.4 Nano/);
+  assert.match(html, /Gemma4 31B IT/);
+  assert.match(html, /GPT-5\.5/);
+  assert.match(html, /Deep Thinking/);
   assert.match(html, /role="status"/);
 });
 
@@ -31,9 +34,8 @@ test("does not show the fallback notice for unaffected projects", async () => {
   const html = (await response.text()).replaceAll("<!-- -->", "");
 
   assert.equal(response.status, 200);
-  assert.match(html, /Backend state: active selection/);
-  assert.match(html, /Selected model/);
-  assert.match(html, /Nimbus 4\.1/);
-  assert.doesNotMatch(html, /Your project is using a fallback model/);
-  assert.doesNotMatch(html, /has been deprecated/);
+  assert.match(html, /Prototype state:[\s\S]{0,80}active model/);
+  assert.match(html, /Choose a model/);
+  assert.match(html, /GPT-5\.4 Nano/);
+  assert.doesNotMatch(html, /Your selected model has been deprecated/);
 });
