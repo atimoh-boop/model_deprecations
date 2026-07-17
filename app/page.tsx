@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { getProjectModelState, isDeprecatedModelFallback } from "./model-state";
 
 export const metadata: Metadata = {
@@ -71,7 +70,7 @@ export default async function Home({ searchParams }: HomeProps) {
 
             <div className="tools-row"><div><strong>Enable external tools</strong><p>External tools enable agents to take action with various outputs, depending on the tool.</p></div><button className="toggle" aria-label="Enable external tools" aria-pressed="false"><span /></button></div>
 
-            <div className="qa-switch"><span>Prototype state: <b>{hasDeprecatedFallback ? "deprecated fallback" : "active model"}</b></span><Link href={hasDeprecatedFallback ? "/?state=active" : "/?state=fallback"}>View {hasDeprecatedFallback ? "unaffected" : "fallback"} state →</Link></div>
+            <div className="qa-switch"><span>Prototype state: <b>{hasDeprecatedFallback ? "deprecated fallback" : "active model"}</b></span><a href={hasDeprecatedFallback ? "/?state=active" : "/?state=fallback"}>View {hasDeprecatedFallback ? "unaffected" : "fallback"} state →</a></div>
           </div>
         </section>
 
